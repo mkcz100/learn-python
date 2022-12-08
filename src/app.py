@@ -14,7 +14,7 @@ class Hello(object):
         self._msg = v
 
     def database(self):
-        self.db_client = MongoClient("mongodb://mo1508_stock:26jpfJVHov1TKboGsbc5@31.186.84.229/mo1508_stock", serverSelectionTimeoutMS=10, connectTimeoutMS=20000)
+        self.db_client = MongoClient("", serverSelectionTimeoutMS=10, connectTimeoutMS=20000)
 
         try:
             return self.db_client.server_info() # Forces a call.

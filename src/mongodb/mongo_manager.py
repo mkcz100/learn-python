@@ -1,5 +1,9 @@
 from pymongo import MongoClient
 from pymongo.errors import ServerSelectionTimeoutError
+from typing import (
+    Dict,
+    Any
+)
 
 
 class MongoManager(object):
@@ -20,7 +24,7 @@ class MongoManager(object):
             self.server_info = None
 
     @property
-    def server_info(self):
+    def server_info(self) -> Dict[str, Any]:
         return self._server_info
 
     @server_info.setter
